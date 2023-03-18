@@ -5,7 +5,7 @@ import { CartContainer } from "./cartStyled";
 function Cart() {
   return (
     <CartContainer>
-      <p>Cart</p>
+      <h1>Carrinho</h1>
       <Items />
     </CartContainer>
   );

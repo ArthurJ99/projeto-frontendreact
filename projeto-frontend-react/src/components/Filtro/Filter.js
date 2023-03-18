@@ -3,7 +3,7 @@ import { FilterContainer } from "./filterStyled";
 function Filter() {
   return (
     <FilterContainer>
-      <h2>Filters</h2>
+      <h2>Filtros</h2>
       <label>
         <p>Valor mínimo:</p>
         <input type="number" />

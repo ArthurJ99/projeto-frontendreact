@@ -23,10 +23,15 @@ export const ProductContainer = styled.div`
 
     figCaption {
       line-height: 2rem;
-    }
+      display: flex;
+      flex-direction: column;
+      margin: 1rem 0.9rem;
 
-    button {
-      justify-self: center;
+      button {
+        width: 70%;
+        margin: 2rem;
+        margin-top: 3rem;
+      }
     }
   }
 `;

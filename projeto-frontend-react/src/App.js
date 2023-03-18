@@ -14,7 +14,9 @@ const GlobalStyled = createGlobalStyle`
 `;
 
 const MainContainer = styled.main`
-  display: flex;
+  display: grid;
+  grid-template-columns: 20vw 60vw 20vw;
+  grid-template-rows: 96vh 6vh;
   height: 100vh;
   width: 100vw;
 `;
