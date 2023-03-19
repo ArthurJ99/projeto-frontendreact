@@ -15,7 +15,12 @@ export const HomeHeadSelector = styled.div`
   width: 100%;
   display: flex;
   grid-column: 1 / span 3;
-  justify-content: right;
+  justify-content: space-between;
+
+  .order{
+    display: flex;
+    gap: 5px;
+  }
 `;
 
 export const HomeFooter = styled.footer`
