@@ -1,4 +1,6 @@
-export function ItemCard({ item, setCartItems, cartItems }) {
+import { CartCard } from "./itemsStyled";
+
+export function ItemCard({ item, setCartItems, cartItems, trashIcon }) {
   const handleRemoveItem = () => {
     if (item.qnt > 1) {
       const newCart = cartItems.map((p) => {
@@ -23,11 +25,13 @@ export function ItemCard({ item, setCartItems, cartItems }) {
   };
 
   return (
-    <>
-      <p>X{item.qnt}</p>
-      <p>{item.name}</p>
-      <p>R$ {item.value.toFixed(2).replace(".", ",")}</p>
-      <button onClick={handleRemoveItem}>remover</button>
-    </>
+    <CartCard>
+        <p>X{item.qnt}</p>
+        <p>{item.name}</p>
+        <p>R$ {item.value.toFixed(2).replace(".", ",")}</p>
+        <button onClick={handleRemoveItem}>
+          <img src={trashIcon} alt="lixo" />
+        </button>
+    </CartCard>
   );
 }

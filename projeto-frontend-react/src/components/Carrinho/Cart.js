@@ -2,7 +2,8 @@ import React from "react";
 import { ItemCard } from "./Items/Items";
 import { CartContainer } from "./cartStyled";
 
-function Cart({ cartItems, setCartItems }) {
+
+function Cart({ cartItems, setCartItems,trashIcon }) {
   const calculateTotal = () => {
     const itemsValues = cartItems.map((item) => {
       return item.qnt * item.value;
@@ -23,10 +24,11 @@ function Cart({ cartItems, setCartItems }) {
             item={item}
             setCartItems={setCartItems}
             cartItems={cartItems}
+            trashIcon={trashIcon}
           />
         );
       })}
-      <p>valor total:R$ {calculateTotal().toFixed(2).replace(".", ",")}</p>
+      <p className="totalValue">Valor Total: R$ {calculateTotal().toFixed(2).replace(".", ",")}</p>
     </CartContainer>
   );
 }

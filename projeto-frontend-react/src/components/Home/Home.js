@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
 import { ProductCard } from "./ProductCard/ProductCard";
-import { HomeContainer, HomeFooter, HomeHeadSelector } from "./homeStyled";
+import { HomeContainer, HomeHeadSelector } from "./homeStyled";
 
 function Home({ productList, setProductList, setCartItems, cartItems }) {
   const orderCrescent = () => {
@@ -33,7 +32,7 @@ function Home({ productList, setProductList, setCartItems, cartItems }) {
     <>
       <HomeContainer>
         <HomeHeadSelector>
-          <p>Produtos:</p>
+          <h3><strong>Produtos:</strong></h3>
           <div className="order">
             <p>Ordenação:</p>
             <select
@@ -64,9 +63,6 @@ function Home({ productList, setProductList, setCartItems, cartItems }) {
           );
         })}
       </HomeContainer>
-      <HomeFooter>
-        <p>@ArthurJordi</p>
-      </HomeFooter>
     </>
   );
 }

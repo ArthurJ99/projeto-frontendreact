@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const ProductContainer = styled.div`
-  background-color: lightgray;
+  background-color: lightblue;
   height: 90%;
   width: 75%;
   border: 1px solid black;
+  border-radius: 5px;
   margin: 4%;
   display: grid;
   grid-template-rows: 70% 3% 3% 3%;
@@ -18,7 +19,8 @@ export const ProductContainer = styled.div`
 
     img {
       height: 100%;
-      border: 1px solid black;
+      border-bottom: 1px solid black;
+      border-radius: 5px 5px 0 0;
     }
 
     figCaption {

@@ -11,7 +11,7 @@ function Filter({ products, setProductList }) {
       setProductList(
         products.filter((item) => {
           return (
-            item.name === name &&
+            item.name.toLowerCase().includes(name.toLowerCase()) &&
             item.value >= Number(minValue) &&
             item.value <= Number(maxValue)
           );
@@ -23,7 +23,10 @@ function Filter({ products, setProductList }) {
       if (minValue) {
         setProductList(
           products.filter((item) => {
-            return item.name === name && item.value >= Number(minValue);
+            return (
+              item.name.toLowerCase().includes(name.toLowerCase()) &&
+              item.value >= Number(minValue)
+            );
           })
         );
         return;
@@ -31,14 +34,17 @@ function Filter({ products, setProductList }) {
       if (maxValue) {
         setProductList(
           products.filter((item) => {
-            return item.name === name && item.value <= Number(maxValue);
+            return (
+              item.name.toLowerCase().includes(name.toLowerCase()) &&
+              item.value <= Number(maxValue)
+            );
           })
         );
         return;
       }
       setProductList(
         products.filter((item) => {
-          return item.name === name;
+          return item.name.toLowerCase().includes(name.toLowerCase());
         })
       );
       return;
@@ -84,7 +90,7 @@ function Filter({ products, setProductList }) {
 
   return (
     <FilterContainer>
-      <h2>Filtros</h2>
+      <h1>Filtros</h1>
       <label>
         <p>Valor mínimo:</p>
         <input
