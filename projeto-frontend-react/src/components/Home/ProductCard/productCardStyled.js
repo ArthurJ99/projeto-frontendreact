@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const ProductContainer = styled.div`
   background-color: lightblue;
-  height: 90%;
-  width: 75%;
+  height: 26%;
+  width: 25%;
+  min-height: 50vh;
   border: 1px solid black;
   border-radius: 5px;
   margin: 4%;

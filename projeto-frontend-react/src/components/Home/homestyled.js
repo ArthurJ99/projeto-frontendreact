@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
 export const HomeContainer = styled.div`
-  grid-column: 2 / span 1;
-  display: grid;
-  grid-template-columns: 20vw 20vw 20vw;
-  grid-template-rows: auto;
   padding: 1% 2%;
   width: 60vw;
+  min-height: 100vh;
+
+  .homePage {
+    display: flex;
+    width: 60vw;
+    flex-wrap: wrap;
+  }
 `;
 
 export const HomeHeadSelector = styled.div`
@@ -26,7 +29,7 @@ export const HomeHeadSelector = styled.div`
   }
 `;
 
-export const HomeFooter = styled.footer`
+/* export const HomeFooter = styled.footer`
   background-color: lightgray;
   width: 100%;
   height: 20px;
@@ -40,4 +43,4 @@ export const HomeFooter = styled.footer`
   p {
     color: lightblue;
   }
-`;
+`; */

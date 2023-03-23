@@ -32,7 +32,9 @@ function Home({ productList, setProductList, setCartItems, cartItems }) {
     <>
       <HomeContainer>
         <HomeHeadSelector>
-          <h3><strong>Produtos:</strong></h3>
+          <h3>
+            <strong>Produtos:</strong>
+          </h3>
           <div className="order">
             <p>Ordenação:</p>
             <select
@@ -52,16 +54,18 @@ function Home({ productList, setProductList, setCartItems, cartItems }) {
             </select>
           </div>
         </HomeHeadSelector>
-        {productList.map((product) => {
-          return (
-            <ProductCard
-              key={product.id}
-              product={product}
-              setCartItems={setCartItems}
-              cartItems={cartItems}
-            />
-          );
-        })}
+        <div className="homePage">
+          {productList.map((product) => {
+            return (
+              <ProductCard
+                key={product.id}
+                product={product}
+                setCartItems={setCartItems}
+                cartItems={cartItems}
+              />
+            );
+          })}
+        </div>
       </HomeContainer>
     </>
   );
